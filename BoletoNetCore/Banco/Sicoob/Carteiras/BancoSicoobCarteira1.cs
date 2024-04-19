@@ -41,7 +41,7 @@ namespace BoletoNetCore
         {
             var beneficiario = boleto.Banco.Beneficiario;
             var contaBancaria = beneficiario.ContaBancaria;
-            return $"{boleto.Carteira}{contaBancaria.Agencia}{boleto.VariacaoCarteira}{beneficiario.Codigo}{beneficiario.CodigoDV}{boleto.NossoNumero}{boleto.NossoNumeroDV}001";
+            return $"{boleto.Carteira}{contaBancaria.Agencia}{boleto.VariacaoCarteira}{beneficiario.Codigo}{beneficiario.CodigoDV}{boleto.NossoNumero}{boleto.NossoNumeroDV}{boleto.NumeroParcela:D3}";
         }
     }
 }
